@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
   gap: 100px;
   padding: 100px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 70px 50px;
   }
 `;
@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
 export const ImageBrace = styled.div`
   padding: 0;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
@@ -62,7 +62,7 @@ export const Input = styled.input`
     color: #b6b4cd;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 320px;
     height: 40px;
   }
@@ -83,7 +83,7 @@ export const CheckboxBrace = styled.div`
   color: #636088;
   font-weight: 300;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     gap: 70px;
   }
 `;
@@ -106,7 +106,7 @@ export const Btn = styled.button`
   font-size: 15px;
   font-weight: 600;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 320px;
     height: 40px;
   }

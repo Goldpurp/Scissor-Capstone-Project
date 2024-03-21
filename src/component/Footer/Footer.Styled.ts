@@ -12,7 +12,7 @@ export const Container = styled.section`
   background-color: #0e0c29;
   color: white;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     height: fit-content;
     width: 100%;
     display: block;
@@ -29,7 +29,7 @@ export const Logo = styled.a`
   font-size: 40px;
   font-weight: 900;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 30px;
   }
 `;
@@ -38,7 +38,7 @@ export const HeaderText = styled.h3`
   font-size: 26px;
   font-weight: 700;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -50,7 +50,7 @@ export const LowerText = styled.a`
   cursor: pointer;
   color: #ffff;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 10px;
   }
 `;
@@ -61,7 +61,7 @@ export const LogoText = styled.p`
   line-height: normal;
   margin: 20px 0;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 15px;
   }
 `;
@@ -83,7 +83,7 @@ export const FooterTextBracePlusInput = styled.div`
   flex-direction: column;
   line-height: 40px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;

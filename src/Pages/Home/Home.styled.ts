@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
   gap: 100px;
   padding-bottom: 100px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: block;
     padding: 0;
     margin-top: 50px;
@@ -21,7 +21,7 @@ export const Container = styled.section`
   gap: 160px;
   padding-top: 50px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: block;
     padding: 0;
   }
@@ -37,7 +37,7 @@ export const BtnLinkDisaplay = styled.p`
   font-size: 15px;
   font-weight: 600;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 8px 10px;
     font-size: 14px;
     font-weight: 600;
@@ -48,7 +48,7 @@ export const BtnLinkDisaplay = styled.p`
 export const HeroBrace = styled.div`
   padding: 0px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +63,7 @@ export const HeaderText = styled.h1`
   font-weight: 900;
   margin: 30px 0;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 32px;
     max-width: 350px;
   }
@@ -75,7 +75,7 @@ export const HeaderText2 = styled.p`
   margin-bottom: 30px;
   max-width: 400px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 13px;
     max-width: 300px;
   }
@@ -91,7 +91,7 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: 15px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
@@ -103,7 +103,7 @@ export const InputBrace = styled.form`
   /* border-radius: 20px; */
   margin-bottom: 10px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 450px;
   }
 `;
@@ -122,7 +122,7 @@ export const Input = styled.input`
     opacity: 1;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 300px;
     height: 50px;
     padding: 0 90px 0 20px;
@@ -144,7 +144,7 @@ export const Btn = styled.button`
   color: #cbd9f7;
   cursor: pointer;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: fit-content;
     height: 35px;
     padding: 0 10px;
@@ -166,7 +166,7 @@ export const MainContainer2 = styled.div`
   background-color: #ffff;
   min-width: 100%;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
@@ -181,7 +181,7 @@ export const BtnLinkDisaplayAds = styled.p`
   font-size: 12px;
   font-weight: 600;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 5px 10px;
     font-size: 12px;
     font-weight: 600;
@@ -195,7 +195,7 @@ export const HeaderTextAds1 = styled.h1`
   font-weight: 900;
   margin: 30px 0;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 30px;
   }
 `;
@@ -238,7 +238,7 @@ export const IconBrace = styled.div`
   justify-content: start;
   align-items: left;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     justify-content: start;
     align-items: start;
     margin-right: 55%;
@@ -267,7 +267,7 @@ export const MainContainer3 = styled.div`
   gap: 180px;
   background-color: #2161df;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
@@ -302,12 +302,12 @@ export const Btn3 = styled.button`
 
 export const HeaderTextAdsBlue = styled.h1`
   font-size: 30px;
-  max-width: 430px;
+  max-width: 770px;
   font-weight: 900;
   margin: 30px 0;
   color: #ffff;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 30px;
   }
 `;
@@ -330,7 +330,7 @@ export const MainContainer4 = styled.div`
   padding: 80px;
   margin-top: 50px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 30px 70px;
   }
 `;
@@ -358,7 +358,7 @@ export const AppIcon = styled.img`
   border-radius: 5px;
   margin: 15px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 30px;
     height: 30px;
   }
@@ -395,7 +395,7 @@ export const ShortenedUrl = styled.div`
   padding: 0 70px 0 20px;
   margin-top: 20px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 300px;
     /* padding: 0 90px 0 20px; */
     margin-left: 17%;
@@ -410,7 +410,7 @@ export const InputBraceResultUrl = styled.div`
   position: relative;
   border-radius: 20px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     max-width: 450px;
   }
 `;
@@ -431,7 +431,7 @@ export const CopyBtn = styled.button`
   color: #ffff;
   cursor: pointer;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     right: 18%;
     top: 69%;
     width: 30px;
@@ -451,7 +451,7 @@ export const QrCode = styled.img`
   border-radius: 15px;
   cursor: pointer;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 60px;
     height: 60px;
   }

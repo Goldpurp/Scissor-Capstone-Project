@@ -21,8 +21,9 @@ export const Logo = styled.a`
   font-size: 40px;
   font-weight: 900;
   cursor: pointer;
+  margin-right: 30px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     margin-left: -40px;
   }
 `;
@@ -35,7 +36,7 @@ export const NavListItems = styled.div`
   gap: 30px;
   cursor: pointer;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
@@ -43,7 +44,8 @@ export const NavListItems = styled.div`
 `;
 
 export const NavDivItems = styled.div`
-  @media (max-width: 430px) {
+
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -59,7 +61,7 @@ export const Login = styled.a`
   font-size: 15px;
   font-weight: 900;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -75,7 +77,7 @@ export const BtnStart = styled.button`
   font-size: 15px;
   cursor: pointer;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -99,9 +101,9 @@ export const LinkDesignLogo = styled(Link)`
 
 export const MobileNav = styled.div<{active:boolean}>`
   display: flex;
-  gap: 200px;
+  /* gap: 200px; */
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     position: absolute;
     top: 0;
     right: 0;
@@ -125,7 +127,7 @@ export const MobileNav = styled.div<{active:boolean}>`
 
 export const Open = styled(RxHamburgerMenu)`
   display: none;
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
     font-size: 35px;
@@ -134,7 +136,7 @@ export const Open = styled(RxHamburgerMenu)`
 
 export const Close = styled(IoMdClose)`
   display: none;
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: flex;
     flex-direction: column;
     font-size: 35px;

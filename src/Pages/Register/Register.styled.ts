@@ -9,7 +9,7 @@ export const MainContainer = styled.div`
   gap: 100px;
   padding: 100px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 70px 50px;
   }
 `;
@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
 export const ImageBrace = styled.div`
   padding: 0;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     display: none;
   }
 `;
@@ -40,7 +40,7 @@ export const LoginBrace = styled.div`
   width: 550px;
   height: 880px;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     padding: 40px;
     height: fit-content;
     max-width: 360px;
@@ -68,7 +68,7 @@ export const Input = styled.input`
     color: #b6b4cd;
   }
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 300px;
     height: 40px;
   }
@@ -89,7 +89,7 @@ export const CheckboxBrace = styled.div`
   font-weight: 300;
   text-align: left;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     font-size: 13px;
   }
 `;
@@ -116,7 +116,7 @@ export const Btn = styled.button`
   font-size: 15px;
   font-weight: 600;
 
-  @media (max-width: 430px) {
+  @media (max-width: 770px) {
     width: 300px;
     height: 40px;
   }
