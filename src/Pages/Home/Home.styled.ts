@@ -101,9 +101,11 @@ export const InputBrace = styled.form`
   height: 40px;
   position: relative;
   border-radius: 20px;
+  margin-bottom: 10px;
 
   @media (max-width: 430px) {
     width: 450px;
+    margin-bottom: 20px;
   }
 `;
 

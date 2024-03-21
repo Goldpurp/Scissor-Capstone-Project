@@ -1,6 +1,5 @@
 import Market from "../../component/Market/Market";
 import { useState } from "react";
-import FileSaver from "file-saver";
 import { FaCopy } from "react-icons/fa";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
@@ -68,33 +67,51 @@ import appIcon13 from "../../../public/Images/shortcuts.jpeg";
 import appIcon14 from "../../../public/Images/printerest.jpeg";
 import appIcon15 from "../../../public/Images/snapchat.jpeg";
 
+
+type BodyData = {
+  long_url: string | undefined;
+  domain: string;
+  group_guid: string;
+  custom_bitlink?: string;
+  
+}
+
 export default function Home() {
   type ShortenedLink = {
     link: string;
     qr_code: string;
   };
 
+
   const [, setActive] = useState(false);
   const [userInput, setUserInput] = useState<string>();
+  const [userAlias, setUserAlias] = useState<string>();
   const [shortenedLink, setShortenedLink] = useState<ShortenedLink>();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    await fetch("https://api-ssl.bitly.com/v4/shorten", {
+    const bodyData: BodyData = {
+      long_url: userInput,
+      domain: "bit.ly",
+      group_guid: "Bo2qgTYASv3"
+  };
+
+  if (userAlias) {
+    bodyData["custom_bitlink"] = userAlias;
+}
+
+    await fetch(`https://api-ssl.bitly.com/v4/shorten`, {
       method: "POST",
       mode: "cors",
       headers: {
         Authorization: `Bearer 20aa82372821f4370dca3250bf2b4a568c52e1a7`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        long_url: userInput,
-        domain: "bit.ly",
-        group_guid: `Bo2qgTYASv3`,
-      }),
+      body: JSON.stringify(bodyData),
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         const new_link = data.link.replace("https://", "");
         fetch(
           `    https://api-ssl.bitly.com/v4/bitlinks/${new_link}/qr?image_format=png`,
@@ -111,10 +128,19 @@ export default function Home() {
             setActive(true);
           });
       });
-      setUserInput("");
-      
-        FileSaver.saveAs(`https://api-ssl.bitly.com/v4/bitlinks/${new_link}/qr?image_format=png`, "image.jpg");
+    setUserInput("");
+
+   
   }
+
+  const handleImageDownload = (src: string) => {
+    const link = document.createElement("a");
+    link.href = src;
+    link.download = "QR-Code.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -142,6 +168,15 @@ export default function Home() {
               <Btn type="submit">Shorten</Btn>
             </InputBrace>
 
+            <Input
+              type="text"
+              value={userAlias}
+              placeholder="add your url alias"
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setUserAlias(event.target.value)
+              }
+            />
+
             <InputBraceResultUrl>
               {shortenedLink && (
                 <ShortenedUrl>
@@ -150,7 +185,7 @@ export default function Home() {
                   <CopyToClipboard text={shortenedLink.link}>
                     <CopyBtn
                       onClick={() => {
-                        alert("Copied to clipboard");
+                        console.log("Copied to clipboard");
                       }}
                     >
                       <FaCopy />
@@ -158,6 +193,7 @@ export default function Home() {
                   </CopyToClipboard>
 
                   <QrCode
+                    onClick={() => handleImageDownload(shortenedLink.qr_code)}
                     src={shortenedLink.qr_code}
                     alt="Qr code"
                     className="qr_img"

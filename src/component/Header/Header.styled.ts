@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 
 export const Nav = styled.nav`
   display: flex;
@@ -7,20 +9,24 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 10px 30px;
 
-  @media (max-width: 430px) {
+  /* @media (max-width: 430px) {
     display: flex;
     justify-content: start;
-  }
+  } */
 `;
 
 export const Logo = styled.a`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-decoration: none;
   color: black;
   font-size: 40px;
   font-weight: 900;
+  /* 
+  @media (max-width: 430px) {
+    display: none;
+  } */
 `;
 
 export const NavListItems = styled.div`
@@ -32,11 +38,21 @@ export const NavListItems = styled.div`
   cursor: pointer;
 
   @media (max-width: 430px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
   }
 `;
 
-export const NavDivItems = styled.div``;
+export const NavDivItems = styled.div`
+  @media (max-width: 430px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+`;
 
 export const Login = styled.a`
   text-decoration: none;
@@ -46,7 +62,8 @@ export const Login = styled.a`
   font-weight: 900;
 
   @media (max-width: 430px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -61,7 +78,8 @@ export const BtnStart = styled.button`
   cursor: pointer;
 
   @media (max-width: 430px) {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -80,12 +98,48 @@ export const MobileNav = styled.div`
   gap: 200px;
 
   @media (max-width: 430px) {
-    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* display: flex; */
+    display: ${(prop) => (prop.active ? "flex" : "none")};
     flex-direction: column;
+    background-color: #ECF6FF;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 6px;
+    gap: 15px;
+    padding: 20px;
+    z-index: 1;
   }
 
   /* &:hover {
     color: #628bec;
     border-bottom: 1px solid red;
   } */
+`;
+
+export const Open = styled(RxHamburgerMenu)`
+  display: none;
+  @media (max-width: 430px) {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+  }
+`;
+
+export const Close = styled(IoMdClose)`
+  display: none;
+  @media (max-width: 430px) {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+  }
+`;
+
+export const Hamburger = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+  margin-right: -50px;
 `;
