@@ -67,21 +67,18 @@ import appIcon13 from "../../../public/Images/shortcuts.jpeg";
 import appIcon14 from "../../../public/Images/printerest.jpeg";
 import appIcon15 from "../../../public/Images/snapchat.jpeg";
 
-
 type BodyData = {
   long_url: string | undefined;
   domain: string;
   group_guid: string;
   custom_bitlink?: string;
-  
-}
+};
 
 export default function Home() {
   type ShortenedLink = {
     link: string;
     qr_code: string;
   };
-
 
   const [, setActive] = useState(false);
   const [userInput, setUserInput] = useState<string>();
@@ -93,12 +90,12 @@ export default function Home() {
     const bodyData: BodyData = {
       long_url: userInput,
       domain: "bit.ly",
-      group_guid: "Bo2qgTYASv3"
-  };
+      group_guid: "Bo2qgTYASv3",
+    };
 
-  if (userAlias) {
-    bodyData["custom_bitlink"] = userAlias;
-}
+    if (userAlias) {
+      bodyData["custom_bitlink"] = userAlias;
+    }
 
     await fetch(`https://api-ssl.bitly.com/v4/shorten`, {
       method: "POST",
@@ -111,7 +108,7 @@ export default function Home() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         const new_link = data.link.replace("https://", "");
         fetch(
           `    https://api-ssl.bitly.com/v4/bitlinks/${new_link}/qr?image_format=png`,
@@ -129,8 +126,6 @@ export default function Home() {
           });
       });
     setUserInput("");
-
-   
   }
 
   const handleImageDownload = (src: string) => {

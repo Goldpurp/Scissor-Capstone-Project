@@ -98,14 +98,13 @@ export const Image = styled.img`
 
 export const InputBrace = styled.form`
   width: 450px;
-  height: 40px;
+
   position: relative;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin-bottom: 10px;
 
   @media (max-width: 430px) {
     width: 450px;
-    margin-bottom: 20px;
   }
 `;
 
@@ -398,7 +397,7 @@ export const ShortenedUrl = styled.div`
 
   @media (max-width: 430px) {
     width: 300px;
-    padding: 0 90px 0 20px;
+    /* padding: 0 90px 0 20px; */
     margin-left: 17%;
     text-align: left;
     gap: 20px;
@@ -412,7 +411,7 @@ export const InputBraceResultUrl = styled.div`
   border-radius: 20px;
 
   @media (max-width: 430px) {
-    width: 450px;
+    max-width: 450px;
   }
 `;
 

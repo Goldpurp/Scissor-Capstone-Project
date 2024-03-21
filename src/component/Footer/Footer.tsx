@@ -56,7 +56,7 @@ export default function Footer() {
         <HeaderText>Newsletter</HeaderText>
         <LogoText>
           {" "}
-          fugiat magnam distinctio possimus porro quisquam ipsam.
+          Stay in the loop with our latest news and updates! 
         </LogoText>
 
         <InputBrace>

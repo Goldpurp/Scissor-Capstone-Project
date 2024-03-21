@@ -100,7 +100,7 @@ export const LinkDesignLogo = styled(Link)`
   color: #000000;
 `;
 
-export const MobileNav = styled.div`
+export const MobileNav = styled.div<{active:boolean}>`
   display: flex;
   gap: 200px;
 
