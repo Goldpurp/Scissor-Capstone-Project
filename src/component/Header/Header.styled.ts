@@ -23,10 +23,11 @@ export const Logo = styled.a`
   color: black;
   font-size: 40px;
   font-weight: 900;
-  /* 
+  cursor: pointer;
+
   @media (max-width: 430px) {
-    display: none;
-  } */
+    margin-left: -40px;
+  }
 `;
 
 export const NavListItems = styled.div`
@@ -93,6 +94,12 @@ export const LinkDesign = styled(Link)`
   }
 `;
 
+export const LinkDesignLogo = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+`;
+
 export const MobileNav = styled.div`
   display: flex;
   gap: 200px;
@@ -104,9 +111,9 @@ export const MobileNav = styled.div`
     /* display: flex; */
     display: ${(prop) => (prop.active ? "flex" : "none")};
     flex-direction: column;
-    background-color: #ECF6FF;
+    background-color: #ecf6ff;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     border-radius: 6px;
     gap: 15px;
     padding: 20px;

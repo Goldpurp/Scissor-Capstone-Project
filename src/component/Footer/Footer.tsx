@@ -10,16 +10,20 @@ import {
   Btn,
   FooterTextBracePlusInput,
   LinkDesign,
+  LinkDesignLogo,
 } from "./Footer.Styled";
 
 export default function Footer() {
   return (
     <Container>
       <div>
-        <Logo>Scissor.io</Logo>
+        <Logo>
+          <LinkDesignLogo to={"/"}>Scissor.io</LinkDesignLogo>
+        </Logo>
         <LogoText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi,
-          fugiat magnam distinctio possimus
+          The Shortner project is a platform that helps you shorten your long
+          links for easy sharing. We ensure that your links are concise and easy
+          to share. Join us to simplify your sharing experience.
         </LogoText>
       </div>
 

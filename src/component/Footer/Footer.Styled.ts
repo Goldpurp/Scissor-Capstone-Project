@@ -66,6 +66,12 @@ export const LogoText = styled.p`
   }
 `;
 
+export const LinkDesignLogo = styled(Link)`
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffff;
+`;
+
 export const FooterTextBrace = styled.div`
   display: flex;
   flex-direction: column;

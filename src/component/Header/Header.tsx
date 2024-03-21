@@ -6,6 +6,7 @@ import {
   Login,
   BtnStart,
   LinkDesign,
+  LinkDesignLogo,
   MobileNav,
   Open,
   Close,
@@ -16,16 +17,13 @@ import { useState } from "react";
 export default function Header() {
   const [active, setActive] = useState<boolean>(false);
 
-
   return (
     <Nav>
-      <Logo href="#">Scissor.io</Logo>
-
-
+      <Logo>
+      <LinkDesignLogo to={"/"}>Scissor.io</LinkDesignLogo>
+         </Logo>
 
       <MobileNav active={active}>
-
-
         <NavListItems>
           <LinkDesign to={"/"}>
             <p>Home</p>
@@ -55,13 +53,13 @@ export default function Header() {
         </NavDivItems>
       </MobileNav>
 
-
-      <Hamburger onClick={()=> {
-          setActive(prev => !prev)
-        }}>
-          {active ? <Close/>  : <Open  /> }
-         
-        </Hamburger>
+      <Hamburger
+        onClick={() => {
+          setActive((prev) => !prev);
+        }}
+      >
+        {active ? <Close /> : <Open />}
+      </Hamburger>
     </Nav>
   );
 }
