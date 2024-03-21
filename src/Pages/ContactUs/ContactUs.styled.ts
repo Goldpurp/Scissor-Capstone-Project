@@ -187,6 +187,7 @@ export const Comment = styled.textarea`
   background: transparent;
   padding: 10px 10px;
   margin-bottom: 20px;
+  resize: none;
 
   &::placeholder {
     color: #b6b4cd;

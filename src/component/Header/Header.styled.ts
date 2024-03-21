@@ -8,11 +8,8 @@ export const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
   padding: 10px 30px;
+  height: 90px;
 
-  /* @media (max-width: 430px) {
-    display: flex;
-    justify-content: start;
-  } */
 `;
 
 export const Logo = styled.a`

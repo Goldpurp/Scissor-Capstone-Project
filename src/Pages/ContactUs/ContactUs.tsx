@@ -30,11 +30,11 @@ export default function ContactUs() {
         </HeaderText2>
         <InfoBrace>
           <Info href="#">Call Us</Info>
-         <InfoData>+234 810 967 53##</InfoData>
+         <InfoData>+234 810 967 5377</InfoData>
         </InfoBrace>
         <InfoBrace>
           <Info href="#">Email Us</Info>
-          <InfoData>lilswatch1@gmail.com</InfoData>
+          <InfoData>lilswatch112@gmail.com</InfoData>
         </InfoBrace>
       </HeroBrace>
 
